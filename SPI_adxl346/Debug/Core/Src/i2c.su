@@ -1,0 +1,4 @@
+../Core/Src/i2c.c:27:6:I2C1_init	4	static
+../Core/Src/i2c.c:86:6:I2C1_byteRead	24	static
+../Core/Src/i2c.c:142:6:I2C1_burstRead	32	static
+../Core/Src/i2c.c:224:6:I2C1_burstWrite	32	static

@@ -1,0 +1,6 @@
+../Core/Src/i2c.c:6:6:i2c_init	4	static
+../Core/Src/i2c.c:22:8:i2c_readByte	176	static
+../Core/Src/i2c.c:48:8:i2c_writeByte	136	static
+../Core/Src/i2c.c:66:8:i2c_WriteMulti	144	static
+../Core/Src/i2c.c:91:8:i2c_ReadMulti	184	static
+../Core/Src/i2c.c:135:6:i2c_bus_scan	24	static

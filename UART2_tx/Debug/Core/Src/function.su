@@ -1,0 +1,2 @@
+../Core/Src/function.c:8:6:LED	8	static
+../Core/Src/function.c:20:6:delayMs	24	static

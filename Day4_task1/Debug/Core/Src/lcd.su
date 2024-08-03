@@ -1,0 +1,6 @@
+../Core/Src/lcd.c:25:6:LCD_string	24	static
+../Core/Src/lcd.c:36:6:LCD_init	8	static
+../Core/Src/lcd.c:53:6:PORTS_init	4	static
+../Core/Src/lcd.c:65:6:LCD_command	16	static
+../Core/Src/lcd.c:79:6:LCD_data	16	static
+../Core/Src/lcd.c:95:6:delayMs	24	static

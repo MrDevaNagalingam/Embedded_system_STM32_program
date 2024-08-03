@@ -1,0 +1,2 @@
+../Drivers/CMSIS/Include/core_cm4.h:1688:22:__NVIC_EnableIRQ	16	static
+../Core/Src/exti.c:7:6:pc13_exti_init	8	static,ignoring_inline_asm
