@@ -1,10 +1,3 @@
-/*
- * lcd.c
- *
- *  Created on: Jul 31, 2024
- *      Author: surya
- */
-
 
 #include "stm32f4xx.h"
 

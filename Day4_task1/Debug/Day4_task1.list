@@ -7,43 +7,43 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
   1 .text         00000368  080001c4  080001c4  000101c4  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .rodata       0000000c  0800052c  0800052c  0001052c  2**2
+  2 .rodata       00000010  0800052c  0800052c  0001052c  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  3 .ARM.extab    00000000  08000538  08000538  00020004  2**0
+  3 .ARM.extab    00000000  0800053c  0800053c  00020004  2**0
                   CONTENTS
-  4 .ARM          00000000  08000538  08000538  00020004  2**0
+  4 .ARM          00000000  0800053c  0800053c  00020004  2**0
                   CONTENTS
-  5 .preinit_array 00000000  08000538  08000538  00020004  2**0
+  5 .preinit_array 00000000  0800053c  0800053c  00020004  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  6 .init_array   00000004  08000538  08000538  00010538  2**2
+  6 .init_array   00000004  0800053c  0800053c  0001053c  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  7 .fini_array   00000004  0800053c  0800053c  0001053c  2**2
+  7 .fini_array   00000004  08000540  08000540  00010540  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  8 .data         00000004  20000000  08000540  00020000  2**0
+  8 .data         00000004  20000000  08000544  00020000  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  9 .bss          00000020  20000004  08000544  00020004  2**2
+  9 .bss          00000020  20000004  08000548  00020004  2**2
                   ALLOC
- 10 ._user_heap_stack 00000604  20000024  08000544  00020024  2**0
+ 10 ._user_heap_stack 00000604  20000024  08000548  00020024  2**0
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  00020004  2**0
                   CONTENTS, READONLY
- 12 .debug_info   00001557  00000000  00000000  00020034  2**0
+ 12 .debug_info   0000154d  00000000  00000000  00020034  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 00000563  00000000  00000000  0002158b  2**0
+ 13 .debug_abbrev 0000055a  00000000  00000000  00021581  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 00000208  00000000  00000000  00021af0  2**3
+ 14 .debug_aranges 00000208  00000000  00000000  00021ae0  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_ranges 000001b0  00000000  00000000  00021cf8  2**3
+ 15 .debug_ranges 000001b0  00000000  00000000  00021ce8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  0001f64e  00000000  00000000  00021ea8  2**0
+ 16 .debug_macro  0001f64e  00000000  00000000  00021e98  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   00001fbf  00000000  00000000  000414f6  2**0
+ 17 .debug_line   00001fbb  00000000  00000000  000414e6  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000c2e4c  00000000  00000000  000434b5  2**0
+ 18 .debug_str    000c2e16  00000000  00000000  000434a1  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000050  00000000  00000000  00106301  2**0
+ 19 .comment      00000050  00000000  00000000  001062b7  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00000608  00000000  00000000  00106354  2**2
+ 20 .debug_frame  00000608  00000000  00000000  00106308  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -368,17 +368,14 @@ int main(void)
 	/* initialize LCD controller */
 	LCD_init();
  80003c0:	f7ff ff3c 	bl	800023c <LCD_init>
-while(1)
-	{
-
-	LCD_string("WELCOME ALL");
+	LCD_string("WELCOME ALL ");
  80003c4:	4803      	ldr	r0, [pc, #12]	; (80003d4 <main+0x18>)
  80003c6:	f7ff ff1d 	bl	8000204 <LCD_string>
-	delayMs(500);
+			delayMs(500);
  80003ca:	f44f 70fa 	mov.w	r0, #500	; 0x1f4
  80003ce:	f7ff ffd7 	bl	8000380 <delayMs>
-	{
- 80003d2:	e7f7      	b.n	80003c4 <main+0x8>
+	while(1){
+ 80003d2:	e7fe      	b.n	80003d2 <main+0x16>
  80003d4:	0800052c 	.word	0x0800052c
 
 080003d8 <NMI_Handler>:
@@ -653,7 +650,7 @@ LoopFillZerobss:
   ldr r1, =_edata
  8000490:	20000004 	.word	0x20000004
   ldr r2, =_sidata
- 8000494:	08000540 	.word	0x08000540
+ 8000494:	08000544 	.word	0x08000544
   ldr r2, =_sbss
  8000498:	20000004 	.word	0x20000004
   ldr r4, =_ebss
@@ -722,10 +719,10 @@ __weak void HAL_IncTick(void)
  80004fe:	4798      	blx	r3
  8000500:	3601      	adds	r6, #1
  8000502:	e7f2      	b.n	80004ea <__libc_init_array+0x1e>
- 8000504:	08000538 	.word	0x08000538
- 8000508:	08000538 	.word	0x08000538
- 800050c:	08000538 	.word	0x08000538
- 8000510:	0800053c 	.word	0x0800053c
+ 8000504:	0800053c 	.word	0x0800053c
+ 8000508:	0800053c 	.word	0x0800053c
+ 800050c:	0800053c 	.word	0x0800053c
+ 8000510:	08000540 	.word	0x08000540
 
 08000514 <_init>:
  8000514:	b5f8      	push	{r3, r4, r5, r6, r7, lr}

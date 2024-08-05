@@ -14,13 +14,14 @@ int main(void)
 
 	/* initialize LCD controller */
 	LCD_init();
-while(1)
-	{
-
-	LCD_string("WELCOME ALL");
-	delayMs(500);
+	LCD_string("WELCOME ALL ");
+			delayMs(500);
+	while(1){
+//		LCD_string("WELCOME ALL ");
+//		delayMs(500);
 	}
 }
+
 
 
 
