@@ -27,23 +27,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  00010788  2**0
                   CONTENTS, READONLY
- 12 .debug_info   000013a6  00000000  00000000  000107b8  2**0
+ 12 .debug_info   000013a7  00000000  00000000  000107b8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 00000683  00000000  00000000  00011b5e  2**0
+ 13 .debug_abbrev 00000694  00000000  00000000  00011b5f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 00000198  00000000  00000000  000121e8  2**3
+ 14 .debug_aranges 00000198  00000000  00000000  000121f8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_ranges 00000130  00000000  00000000  00012380  2**3
+ 15 .debug_ranges 00000130  00000000  00000000  00012390  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  0002087f  00000000  00000000  000124b0  2**0
+ 16 .debug_macro  0002087f  00000000  00000000  000124c0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   000033cf  00000000  00000000  00032d2f  2**0
+ 17 .debug_line   0000309c  00000000  00000000  00032d3f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000c5fdd  00000000  00000000  000360fe  2**0
+ 18 .debug_str    000c5fdd  00000000  00000000  00035ddb  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000050  00000000  00000000  000fc0db  2**0
+ 19 .comment      00000050  00000000  00000000  000fbdb8  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  0000045c  00000000  00000000  000fc12c  2**2
+ 20 .debug_frame  0000045c  00000000  00000000  000fbe08  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -589,76 +589,75 @@ void delay(uint32_t ms)
  800052a:	bd80      	pop	{r7, pc}
 
 0800052c <i2c_init>:
-
 #include "i2c.h"
 #include "stm32f4xx.h"                  // Device header
 #include "stdio.h"
 
-void i2c_init(void){
+void i2c_init(void) {
  800052c:	b480      	push	{r7}
  800052e:	af00      	add	r7, sp, #0
-RCC->AHB1ENR|=RCC_AHB1ENR_GPIOBEN; //enable gpiob clock
+	RCC->AHB1ENR |= RCC_AHB1ENR_GPIOBEN; //enable gpiob clock
  8000530:	4b1f      	ldr	r3, [pc, #124]	; (80005b0 <i2c_init+0x84>)
  8000532:	6b1b      	ldr	r3, [r3, #48]	; 0x30
  8000534:	4a1e      	ldr	r2, [pc, #120]	; (80005b0 <i2c_init+0x84>)
  8000536:	f043 0302 	orr.w	r3, r3, #2
  800053a:	6313      	str	r3, [r2, #48]	; 0x30
-RCC->APB1ENR|=RCC_APB1ENR_I2C1EN; //enable i2c1 clock
+	RCC->APB1ENR |= RCC_APB1ENR_I2C1EN; //enable i2c1 clock
  800053c:	4b1c      	ldr	r3, [pc, #112]	; (80005b0 <i2c_init+0x84>)
  800053e:	6c1b      	ldr	r3, [r3, #64]	; 0x40
  8000540:	4a1b      	ldr	r2, [pc, #108]	; (80005b0 <i2c_init+0x84>)
  8000542:	f443 1300 	orr.w	r3, r3, #2097152	; 0x200000
  8000546:	6413      	str	r3, [r2, #64]	; 0x40
-GPIOB->MODER|=0xA0000; //set pb8and9 to alternative function
+	GPIOB->MODER |= 0xA0000; //set pb8and9 to alternative function
  8000548:	4b1a      	ldr	r3, [pc, #104]	; (80005b4 <i2c_init+0x88>)
  800054a:	681b      	ldr	r3, [r3, #0]
  800054c:	4a19      	ldr	r2, [pc, #100]	; (80005b4 <i2c_init+0x88>)
  800054e:	f443 2320 	orr.w	r3, r3, #655360	; 0xa0000
  8000552:	6013      	str	r3, [r2, #0]
-GPIOB->AFR[1]|=0x44;
+	GPIOB->AFR[1] |= 0x44;
  8000554:	4b17      	ldr	r3, [pc, #92]	; (80005b4 <i2c_init+0x88>)
  8000556:	6a5b      	ldr	r3, [r3, #36]	; 0x24
  8000558:	4a16      	ldr	r2, [pc, #88]	; (80005b4 <i2c_init+0x88>)
  800055a:	f043 0344 	orr.w	r3, r3, #68	; 0x44
  800055e:	6253      	str	r3, [r2, #36]	; 0x24
-GPIOB->OTYPER|=GPIO_OTYPER_OT8|GPIO_OTYPER_OT9; //set pb8 and pb9 as open drain
+	GPIOB->OTYPER |= GPIO_OTYPER_OT8 | GPIO_OTYPER_OT9; //set pb8 and pb9 as open drain
  8000560:	4b14      	ldr	r3, [pc, #80]	; (80005b4 <i2c_init+0x88>)
  8000562:	685b      	ldr	r3, [r3, #4]
  8000564:	4a13      	ldr	r2, [pc, #76]	; (80005b4 <i2c_init+0x88>)
  8000566:	f443 7340 	orr.w	r3, r3, #768	; 0x300
  800056a:	6053      	str	r3, [r2, #4]
 
-I2C1->CR1=0x8000;
+	I2C1->CR1 = 0x8000;
  800056c:	4b12      	ldr	r3, [pc, #72]	; (80005b8 <i2c_init+0x8c>)
  800056e:	f44f 4200 	mov.w	r2, #32768	; 0x8000
  8000572:	601a      	str	r2, [r3, #0]
-I2C1->CR1&=~0x8000;
+	I2C1->CR1 &= ~0x8000;
  8000574:	4b10      	ldr	r3, [pc, #64]	; (80005b8 <i2c_init+0x8c>)
  8000576:	681b      	ldr	r3, [r3, #0]
  8000578:	4a0f      	ldr	r2, [pc, #60]	; (80005b8 <i2c_init+0x8c>)
  800057a:	f423 4300 	bic.w	r3, r3, #32768	; 0x8000
  800057e:	6013      	str	r3, [r2, #0]
-I2C1->CR2|=0x10;
+	I2C1->CR2 |= 0x10;
  8000580:	4b0d      	ldr	r3, [pc, #52]	; (80005b8 <i2c_init+0x8c>)
  8000582:	685b      	ldr	r3, [r3, #4]
  8000584:	4a0c      	ldr	r2, [pc, #48]	; (80005b8 <i2c_init+0x8c>)
  8000586:	f043 0310 	orr.w	r3, r3, #16
  800058a:	6053      	str	r3, [r2, #4]
-I2C1->CCR=80; //standard 100KHz
+	I2C1->CCR = 80; //standard 100KHz
  800058c:	4b0a      	ldr	r3, [pc, #40]	; (80005b8 <i2c_init+0x8c>)
  800058e:	2250      	movs	r2, #80	; 0x50
  8000590:	61da      	str	r2, [r3, #28]
-I2C1->TRISE=17;
+	I2C1->TRISE = 17;
  8000592:	4b09      	ldr	r3, [pc, #36]	; (80005b8 <i2c_init+0x8c>)
  8000594:	2211      	movs	r2, #17
  8000596:	621a      	str	r2, [r3, #32]
-I2C1->CR1|=0x1;
+	I2C1->CR1 |= 0x1;
  8000598:	4b07      	ldr	r3, [pc, #28]	; (80005b8 <i2c_init+0x8c>)
  800059a:	681b      	ldr	r3, [r3, #0]
  800059c:	4a06      	ldr	r2, [pc, #24]	; (80005b8 <i2c_init+0x8c>)
  800059e:	f043 0301 	orr.w	r3, r3, #1
  80005a2:	6013      	str	r3, [r2, #0]
-	
+
 }
  80005a4:	bf00      	nop
  80005a6:	46bd      	mov	sp, r7

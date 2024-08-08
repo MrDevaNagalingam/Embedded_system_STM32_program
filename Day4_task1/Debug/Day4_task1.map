@@ -2876,21 +2876,21 @@ LOAD /opt/st/stm32cubeide_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.
 LOAD /opt/st/stm32cubeide_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a
 LOAD /opt/st/stm32cubeide_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/libgcc.a
 
-.debug_info     0x0000000000000000     0x154d
+.debug_info     0x0000000000000000     0x1531
  .debug_info    0x0000000000000000      0x42d ./Core/Src/lcd.o
- .debug_info    0x000000000000042d       0xb0 ./Core/Src/main.o
- .debug_info    0x00000000000004dd      0x121 ./Core/Src/stm32f4xx_it.o
- .debug_info    0x00000000000005fe      0x55b ./Core/Src/system_stm32f4xx.o
- .debug_info    0x0000000000000b59       0x22 ./Core/Startup/startup_stm32f446retx.o
- .debug_info    0x0000000000000b7b      0x9d2 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_info    0x000000000000042d       0x94 ./Core/Src/main.o
+ .debug_info    0x00000000000004c1      0x121 ./Core/Src/stm32f4xx_it.o
+ .debug_info    0x00000000000005e2      0x55b ./Core/Src/system_stm32f4xx.o
+ .debug_info    0x0000000000000b3d       0x22 ./Core/Startup/startup_stm32f446retx.o
+ .debug_info    0x0000000000000b5f      0x9d2 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
 
-.debug_abbrev   0x0000000000000000      0x55a
+.debug_abbrev   0x0000000000000000      0x56d
  .debug_abbrev  0x0000000000000000      0x146 ./Core/Src/lcd.o
- .debug_abbrev  0x0000000000000146       0x6b ./Core/Src/main.o
- .debug_abbrev  0x00000000000001b1       0x74 ./Core/Src/stm32f4xx_it.o
- .debug_abbrev  0x0000000000000225      0x116 ./Core/Src/system_stm32f4xx.o
- .debug_abbrev  0x000000000000033b       0x12 ./Core/Startup/startup_stm32f446retx.o
- .debug_abbrev  0x000000000000034d      0x20d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_abbrev  0x0000000000000146       0x7e ./Core/Src/main.o
+ .debug_abbrev  0x00000000000001c4       0x74 ./Core/Src/stm32f4xx_it.o
+ .debug_abbrev  0x0000000000000238      0x116 ./Core/Src/system_stm32f4xx.o
+ .debug_abbrev  0x000000000000034e       0x12 ./Core/Startup/startup_stm32f446retx.o
+ .debug_abbrev  0x0000000000000360      0x20d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
 
 .debug_aranges  0x0000000000000000      0x208
  .debug_aranges
@@ -2914,7 +2914,7 @@ LOAD /opt/st/stm32cubeide_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.
  .debug_ranges  0x00000000000000b0       0x20 ./Core/Startup/startup_stm32f446retx.o
  .debug_ranges  0x00000000000000d0       0xe0 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
 
-.debug_macro    0x0000000000000000    0x1f64e
+.debug_macro    0x0000000000000000    0x1f658
  .debug_macro   0x0000000000000000      0x1cc ./Core/Src/lcd.o
  .debug_macro   0x00000000000001cc      0xa78 ./Core/Src/lcd.o
  .debug_macro   0x0000000000000c44       0x2e ./Core/Src/lcd.o
@@ -2953,31 +2953,31 @@ LOAD /opt/st/stm32cubeide_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.
  .debug_macro   0x000000000001ec52       0x89 ./Core/Src/lcd.o
  .debug_macro   0x000000000001ecdb      0x295 ./Core/Src/lcd.o
  .debug_macro   0x000000000001ef70      0x126 ./Core/Src/lcd.o
- .debug_macro   0x000000000001f096       0x11 ./Core/Src/main.o
- .debug_macro   0x000000000001f0a7      0x1d3 ./Core/Src/stm32f4xx_it.o
- .debug_macro   0x000000000001f27a      0x1ba ./Core/Src/system_stm32f4xx.o
- .debug_macro   0x000000000001f434      0x21a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_macro   0x000000000001f096       0x1b ./Core/Src/main.o
+ .debug_macro   0x000000000001f0b1      0x1d3 ./Core/Src/stm32f4xx_it.o
+ .debug_macro   0x000000000001f284      0x1ba ./Core/Src/system_stm32f4xx.o
+ .debug_macro   0x000000000001f43e      0x21a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
 
-.debug_line     0x0000000000000000     0x1fbb
- .debug_line    0x0000000000000000      0x76a ./Core/Src/lcd.o
- .debug_line    0x000000000000076a       0x52 ./Core/Src/main.o
- .debug_line    0x00000000000007bc      0x731 ./Core/Src/stm32f4xx_it.o
- .debug_line    0x0000000000000eed      0x6f0 ./Core/Src/system_stm32f4xx.o
- .debug_line    0x00000000000015dd       0x88 ./Core/Startup/startup_stm32f446retx.o
- .debug_line    0x0000000000001665      0x956 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+.debug_line     0x0000000000000000     0x1fcf
+ .debug_line    0x0000000000000000      0x769 ./Core/Src/lcd.o
+ .debug_line    0x0000000000000769       0x67 ./Core/Src/main.o
+ .debug_line    0x00000000000007d0      0x731 ./Core/Src/stm32f4xx_it.o
+ .debug_line    0x0000000000000f01      0x6f0 ./Core/Src/system_stm32f4xx.o
+ .debug_line    0x00000000000015f1       0x88 ./Core/Startup/startup_stm32f446retx.o
+ .debug_line    0x0000000000001679      0x956 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
 
-.debug_str      0x0000000000000000    0xc2e16
+.debug_str      0x0000000000000000    0xc2e22
  .debug_str     0x0000000000000000    0xc1dc7 ./Core/Src/lcd.o
                                       0xc204d (size before relaxing)
- .debug_str     0x00000000000c1dc7       0x18 ./Core/Src/main.o
-                                       0x2cf6 (size before relaxing)
- .debug_str     0x00000000000c1ddf      0x390 ./Core/Src/stm32f4xx_it.o
+ .debug_str     0x00000000000c1dc7       0x24 ./Core/Src/main.o
+                                       0x2d02 (size before relaxing)
+ .debug_str     0x00000000000c1deb      0x390 ./Core/Src/stm32f4xx_it.o
                                       0xc2203 (size before relaxing)
- .debug_str     0x00000000000c216f       0xe5 ./Core/Src/system_stm32f4xx.o
+ .debug_str     0x00000000000c217b       0xe5 ./Core/Src/system_stm32f4xx.o
                                       0xc2095 (size before relaxing)
- .debug_str     0x00000000000c2254       0x36 ./Core/Startup/startup_stm32f446retx.o
+ .debug_str     0x00000000000c2260       0x36 ./Core/Startup/startup_stm32f446retx.o
                                          0x70 (size before relaxing)
- .debug_str     0x00000000000c228a      0xb8c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_str     0x00000000000c2296      0xb8c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
                                       0xc2c5a (size before relaxing)
 
 .comment        0x0000000000000000       0x50

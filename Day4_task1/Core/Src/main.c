@@ -3,7 +3,7 @@
 /* PB6 for LCD R/W */
 /* PB7 for LCD EN */
 
-
+#include<lcd.h>
 
 
 

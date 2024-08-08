@@ -1,1 +1,3 @@
-../Core/Src/systick.c:18:6:systickDelayMs	24	static
+../Core/Src/systick.c:20:6:systickDelayMs	24	static
+../Core/Src/systick.c:43:6:delay_ms	24	static
+../Core/Src/systick.c:49:6:delay_us	24	static

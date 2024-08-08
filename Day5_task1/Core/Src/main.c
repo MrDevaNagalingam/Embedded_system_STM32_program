@@ -120,8 +120,7 @@ void delay_us(uint32_t microseconds) {
 	timing_delay = microseconds;
 
 	// Wait until timing_delay reaches zero
-	while (timing_delay != 0)
-		;
+	while (timing_delay != 0);
 }
 
 /* Delay function for nanoseconds */
@@ -135,8 +134,7 @@ void delay_ns(uint32_t nanoseconds) {
 	timing_delay = ticks;
 
 	// Wait until timing_delay reaches zero
-	while (timing_delay != 0)
-		;
+	while (timing_delay != 0);
 }
 
 void SysTick_Handler(void) {

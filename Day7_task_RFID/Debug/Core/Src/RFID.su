@@ -1,0 +1,15 @@
+../Core/Src/RFID.c:32:6:spi_cs_rfid_write	16	static
+../Core/Src/RFID.c:44:9:rc522_regRead8	24	static
+../Core/Src/RFID.c:58:6:rc522_regWrite8	24	static
+../Core/Src/RFID.c:69:6:rc522_setBit	16	static
+../Core/Src/RFID.c:77:6:rc522_clearBit	16	static
+../Core/Src/RFID.c:85:6:rc522_reset	8	static
+../Core/Src/RFID.c:93:6:rc522_antennaON	16	static
+../Core/Src/RFID.c:106:6:rc522_checkCard	24	static
+../Core/Src/RFID.c:124:6:rc522_request	32	static
+../Core/Src/RFID.c:140:6:rc522_toCard	40	static
+../Core/Src/RFID.c:241:6:rc522_antiColl	32	static
+../Core/Src/RFID.c:272:6:rc522_halt	24	static
+../Core/Src/RFID.c:284:6:rc522_calculateCRC	40	static
+../Core/Src/RFID.c:313:6:rc522_compareIds	24	static
+../Core/Src/RFID.c:326:6:rc522_init	16	static

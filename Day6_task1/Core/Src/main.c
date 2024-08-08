@@ -68,11 +68,6 @@ void lcd_send_string(char *str);
 char time_str[9];
 char date_str[11];
 
-/* USER CODE END PFP */
-
-/* Private user code ---------------------------------------------------------*/
-/* USER CODE BEGIN 0 */
-
 /* USER CODE END 0 */
 
 /**
@@ -124,6 +119,7 @@ int main(void)
   }
   /* USER CODE END 3 */
 }
+
 void lcd_send_cmd(char cmd)
 {
     char data_u, data_l;

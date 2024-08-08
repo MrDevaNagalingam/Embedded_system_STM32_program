@@ -99,21 +99,19 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-    /* USER CODE END WHILE */
-	  HAL_ADC_Start(&hadc1);
-	  	          if (HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY) == HAL_OK)
-	  	          {
-	  	              adc_value = HAL_ADC_GetValue(&hadc1);
+	while (1) {
+		/* USER CODE END WHILE */
+		HAL_ADC_Start(&hadc1);
+		if (HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY) == HAL_OK) {
+			adc_value = HAL_ADC_GetValue(&hadc1);
 
-	  	              float temperature = (adc_value*5 / 255.0) /0.05;
-	  	              float humidity = (((adc_value*5 / 255.0) - 0.8 ) * 100) /2.5;
-  	              printf( "Temp:%.2f C, Hum:%.2f %%\r\n", temperature, humidity);
-	  	          }
-	  	          HAL_Delay(100);
-    /* USER CODE BEGIN 3 */
-  }
+			float temperature = (adc_value * 5 / 255.0) / 0.05;
+			float humidity = (((adc_value * 5 / 255.0) - 0.8) * 100) / 2.5;
+			printf("Temp:%.2f C, Hum:%.2f %%\r\n", temperature, humidity);
+		}
+		HAL_Delay(100);
+		/* USER CODE BEGIN 3 */
+	}
   /* USER CODE END 3 */
 }
 

@@ -60,8 +60,8 @@ all: main-build
 main-build: Day7_task_RFID.elf secondary-outputs
 
 # Tool invocations
-Day7_task_RFID.elf Day7_task_RFID.map: $(OBJS) $(USER_OBJS) /home/deva/STM32CubeIDE/workspace_1.11.0/Day7_task_RFID/STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Day7_task_RFID.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/deva/STM32CubeIDE/workspace_1.11.0/Day7_task_RFID/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Day7_task_RFID.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Day7_task_RFID.elf Day7_task_RFID.map: $(OBJS) $(USER_OBJS) /home/deva/STM/workspace_1.11.0/Day7_task_RFID/STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Day7_task_RFID.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/deva/STM/workspace_1.11.0/Day7_task_RFID/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Day7_task_RFID.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
