@@ -1,0 +1,10 @@
+../Core/Src/main.c:121:5:main	16	static
+../Core/Src/main.c:176:6:init_leds	32	static
+../Core/Src/main.c:194:6:turn_on_led	16	static
+../Core/Src/main.c:210:6:clear_leds	8	static
+../Core/Src/main.c:215:6:display_name_for_rfid	40	static
+../Core/Src/main.c:232:6:system_init	8	static
+../Core/Src/main.c:242:6:SystemClock_Config	88	static
+../Core/Src/main.c:290:13:MX_USART2_UART_Init	8	static
+../Core/Src/main.c:323:13:MX_GPIO_Init	48	static
+../Core/Src/main.c:369:6:Error_Handler	4	static,ignoring_inline_asm
