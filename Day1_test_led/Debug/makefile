@@ -60,8 +60,8 @@ all: main-build
 main-build: Day1_task1.elf secondary-outputs
 
 # Tool invocations
-Day1_task1.elf Day1_task1.map: $(OBJS) $(USER_OBJS) /home/deva/STM32CubeIDE/workspace_1.11.0/Day1_test_led/STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Day1_task1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/deva/STM32CubeIDE/workspace_1.11.0/Day1_test_led/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Day1_task1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Day1_task1.elf Day1_task1.map: $(OBJS) $(USER_OBJS) /home/deva/Embedded_system_STM32_program/Day1_test_led/STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Day1_task1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/deva/Embedded_system_STM32_program/Day1_test_led/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Day1_task1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

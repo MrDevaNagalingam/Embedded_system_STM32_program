@@ -1,0 +1,7 @@
+../Core/Src/lcd.c:3:6:LCD_display_custom_chars	8	static
+../Core/Src/lcd.c:14:6:LCD_init	8	static
+../Core/Src/lcd.c:27:6:PORTS_init	40	static
+../Core/Src/lcd.c:52:6:LCD_command	16	static
+../Core/Src/lcd.c:70:6:LCD_data	16	static
+../Core/Src/lcd.c:82:6:LCD_create_char	24	static
+../Core/Src/lcd.c:90:6:delayMs	16	static
