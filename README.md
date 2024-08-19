@@ -1,10 +1,11 @@
 # Embedded_system_STM32_program
 
 These are the Notion links for the code's references.
-This the day by day task given in internship: 
+
+This is the daily assignment for the internship:
 https://www.notion.so/Tasks-1799ed4142cc45c791ee4bde5c603524?pvs=4
 
-notes:
+Observations made in class:
 https://www.notion.so/Notes-31973377f2ad46b68e78342da4217cad?pvs=4
 
 Notes About Mazadhi book:
