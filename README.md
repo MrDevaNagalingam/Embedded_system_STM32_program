@@ -1,4 +1,4 @@
-# Embedded_system_STM32_program
+# Embedded_System_STM32_Program
 
 These are the Notion links for the code's references.
 
