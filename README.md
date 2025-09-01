@@ -5,7 +5,7 @@ These are the Notion links for the code's references.
 📌 If you would like to grant authorization for this link, please let me know. I will grant you access to examine the documentation.
 
 This is the daily assignment for the internship:
-https://www.notion.so/Tasks-1799ed4142cc45c791ee4bde5c603524?pvs=4
+https://foregoing-phone-2d9.notion.site/STM32-Tasks-1799ed4142cc45c791ee4bde5c603524?source=copy_link
 
 Observations made in class:
 https://www.notion.so/Notes-31973377f2ad46b68e78342da4217cad?pvs=4
